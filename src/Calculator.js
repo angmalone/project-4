@@ -32,148 +32,168 @@ class Calculator extends Component {
 
     this.addDefense = this.addDefense.bind(this);
     this.subtractDefense = this.subtractDefense.bind(this);
+
+    this.calculateHappiness = this.calculateHappiness.bind(this);
   }
 
-  render() {
-    return (
-      <div className="Calculator">
-        <h3># of settlers:</h3>
-        <button onClick={this.addSettler}>&#8592;</button>
-        <h3>{this.state.settlerCount}</h3>
-        <button onClick={this.subtractSettler}>&#8594;</button>
+  calculateHappiness() {
+    let totalHappiness =
+      this.state.foodCount * 20 +
+      this.state.waterCount * 20 +
+      this.state.bedCount * 10 +
+      this.state.shelteredBedCount * 10 +
+      this.state.defenseCount * 20 / this.state.settlerCount;
 
-        <h3>Amount of food:</h3>
-        <button onClick={this.addFood}>&#8592;</button>
-        <h3>{this.state.foodCount}</h3>
-        <button onClick={this.subtractFood}>&#8594;</button>
-
-        <h3>Amount of water:</h3>
-        <button onClick={this.addWater}>&#8592;</button>
-        <h3>{this.state.waterCount}</h3>
-        <button onClick={this.subtractWater}>&#8594;</button>
-
-        <h3># of beds:</h3>
-        <button onClick={this.addBed}>&#8592;</button>
-        <h3>{this.state.bedCount}</h3>
-        <button onClick={this.subtractBed}>&#8594;</button>
-
-        <h3># of sheltered beds:</h3>
-        <button onClick={this.addShelteredBed}>&#8592;</button>
-        <h3>{this.state.shelteredBedCount}</h3>
-        <button onClick={this.subtractShelteredBed}>&#8594;</button>
-
-        <h3>Amount of defense:</h3>
-        <button onClick={this.addDefense}>&#8592;</button>
-        <h3>{this.state.defenseCount}</h3>
-        <button onClick={this.subtractDefense}>&#8594;</button>
-
-        <h3>Total Happiness:</h3>
-        <h3>{this.state.totalHappiness}</h3>
-      </div>
-    );
+    this.setState({
+      totalHappiness
+    });
   }
-  addSettler() {
+
+  subtractSettler() {
     let settlerCount = this.state.settlerCount - 1;
 
     this.setState({
       settlerCount
     });
+    this.calculateHappiness();
   }
 
-  subtractSettler() {
+  addSettler() {
     let settlerCount = this.state.settlerCount + 1;
 
     this.setState({
       settlerCount
     });
+    this.calculateHappiness();
   }
 
-  addFood() {
+  subtractFood() {
     let foodCount = this.state.foodCount - 1;
 
     this.setState({
       foodCount
     });
+    this.calculateHappiness();
   }
 
-  subtractFood() {
+  addFood() {
     let foodCount = this.state.foodCount + 1;
 
     this.setState({
       foodCount
     });
+    this.calculateHappiness();
   }
 
-  addWater() {
+  subtractWater() {
     let waterCount = this.state.waterCount - 1;
 
     this.setState({
       waterCount
     });
+    this.calculateHappiness();
   }
 
-  subtractWater() {
+  addWater() {
     let waterCount = this.state.waterCount + 1;
 
     this.setState({
       waterCount
     });
+    this.calculateHappiness();
   }
 
-  addBed() {
+  subtractBed() {
     let bedCount = this.state.bedCount - 1;
 
     this.setState({
       bedCount
     });
+    this.calculateHappiness();
   }
 
-  subtractBed() {
+  addBed() {
     let bedCount = this.state.bedCount + 1;
 
     this.setState({
       bedCount
     });
+    this.calculateHappiness();
   }
 
-  addShelteredBed() {
+  subtractShelteredBed() {
     let shelteredBedCount = this.state.shelteredBedCount - 1;
 
     this.setState({
       shelteredBedCount
     });
+    this.calculateHappiness();
   }
 
-  subtractShelteredBed() {
+  addShelteredBed() {
     let shelteredBedCount = this.state.shelteredBedCount + 1;
 
     this.setState({
       shelteredBedCount
     });
+    this.calculateHappiness();
   }
 
-  addDefense() {
+  subtractDefense() {
     let defenseCount = this.state.defenseCount - 1;
 
     this.setState({
       defenseCount
     });
+    this.calculateHappiness();
   }
 
-  subtractDefense() {
+  addDefense() {
     let defenseCount = this.state.defenseCount + 1;
 
     this.setState({
       defenseCount
     });
+    this.calculateHappiness();
   }
 
-  calculateHappiness() {
-    let totalHappiness = this.state.defenseCount + 1;
+  render() {
+    return (
+      <div className="HappinessCalc">
+        <h3># of settlers:</h3>
+        <button onClick={this.subtractSettler}>&#8592;</button>
+        <h3>{this.state.settlerCount}</h3>
+        <button onClick={this.addSettler}>&#8594;</button>
 
-    this.setState({
-      totalHappiness
-    });
+        <h3>Amount of food:</h3>
+        <button onClick={this.subtractFood}>&#8592;</button>
+        <h3>{this.state.foodCount}</h3>
+        <button onClick={this.addFood}>&#8594;</button>
+
+        <h3>Amount of water:</h3>
+        <button onClick={this.subtractWater}>&#8592;</button>
+        <h3>{this.state.waterCount}</h3>
+        <button onClick={this.addWater}>&#8594;</button>
+
+        <h3># of beds:</h3>
+        <button onClick={this.subtractBed}>&#8592;</button>
+        <h3>{this.state.bedCount}</h3>
+        <button onClick={this.addBed}>&#8594;</button>
+
+        <h3># of sheltered beds:</h3>
+        <button onClick={this.subtractShelteredBed}>&#8592;</button>
+        <h3>{this.state.shelteredBedCount}</h3>
+        <button onClick={this.addShelteredBed}>&#8594;</button>
+
+        <h3>Amount of defense:</h3>
+        <button onClick={this.subtractDefense}>&#8592;</button>
+        <h3>{this.state.defenseCount}</h3>
+        <button onClick={this.addDefense}>&#8594;</button>
+
+        <h3>Total Happiness:</h3>
+        <h3>{this.state.totalHappiness}</h3>
+      </div>
+    );
   }
 }
 
