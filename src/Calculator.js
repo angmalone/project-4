@@ -44,93 +44,38 @@ class Calculator extends Component {
   }
 
   subtractFood() {
-    let foodCount = this.state.foodCount - 1;
-
-    this.setState({
-      foodCount
-    });
-    //this.calculateHappiness();
+    this.setState({ foodCount: this.state.foodCount - 1 });
   }
-
   addFood() {
-    let foodCount = this.state.foodCount + 1;
-
-    this.setState({
-      foodCount
-    });
-    //this.calculateHappiness();
+    this.setState({ foodCount: this.state.foodCount + 1 });
   }
 
   subtractWater() {
-    let waterCount = this.state.waterCount - 1;
-
-    this.setState({
-      waterCount
-    });
-    //this.calculateHappiness();
+    this.setState({ waterCount: this.state.waterCount - 1 });
   }
-
   addWater() {
-    let waterCount = this.state.waterCount + 1;
-
-    this.setState({
-      waterCount
-    });
-    //this.calculateHappiness();
+    this.setState({ waterCount: this.state.waterCount + 1 });
   }
 
   subtractBed() {
-    let bedCount = this.state.bedCount - 1;
-
-    this.setState({
-      bedCount
-    });
-    //this.calculateHappiness();
+    this.setState({ bedCount: this.state.bedCount - 1 });
   }
-
   addBed() {
-    let bedCount = this.state.bedCount + 1;
-
-    this.setState({
-      bedCount
-    });
-    //this.calculateHappiness();
+    this.setState({ bedCount: this.state.bedCount + 1 });
   }
 
   subtractShelteredBed() {
-    let shelteredBedCount = this.state.shelteredBedCount - 1;
-
-    this.setState({
-      shelteredBedCount
-    });
-    //this.calculateHappiness();
+    this.setState({ shelteredBedCount: this.state.shelteredBedCount - 1 });
   }
-
   addShelteredBed() {
-    let shelteredBedCount = this.state.shelteredBedCount + 1;
-
-    this.setState({
-      shelteredBedCount
-    });
-    //this.calculateHappiness();
+    this.setState({ shelteredBedCount: this.state.shelteredBedCount + 1 });
   }
 
   subtractDefense() {
-    let defenseCount = this.state.defenseCount - 1;
-
-    this.setState({
-      defenseCount
-    });
-    //this.calculateHappiness();
+    this.setState({ defenseCount: this.state.defenseCount - 1 });
   }
-
   addDefense() {
-    let defenseCount = this.state.defenseCount + 1;
-
-    this.setState({
-      defenseCount
-    });
-    //this.calculateHappiness();
+    this.setState({ defenseCount: this.state.defenseCount + 1 });
   }
 
   componentDidMount() {
