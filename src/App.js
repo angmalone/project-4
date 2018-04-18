@@ -11,10 +11,18 @@ class App extends Component {
       <div>
         <nav className="Navigation">
           <h1>Project 4</h1>
-          <Link to="/">Home</Link>
-          <Link to="/terminal-hacker">Terminal Hacker</Link>
-          <Link to="/happiness-calculator">Happiness Calculator</Link>
-          <Link to="/character-log">Character Log</Link>
+          <Link to="/">
+            <h3>Home</h3>
+          </Link>
+          <Link to="/terminal-hacker">
+            <h3>Terminal Hacker</h3>
+          </Link>
+          <Link to="/happiness-calculator">
+            <h3>Happiness Calculator</h3>
+          </Link>
+          <Link to="/character-log">
+            <h3>Character Log</h3>
+          </Link>
         </nav>
         <main>
           <Switch>

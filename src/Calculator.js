@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import subtract from "./subtract.png";
+import add from "./add.png";
+//import "./Calculator.css";
 //import InputRange from "react-input-range";
 
 class Calculator extends Component {
@@ -37,114 +40,112 @@ class Calculator extends Component {
   }
 
   subtractSettler = () => {
-    //let settlerCount = this.state.settlerCount;
     this.setState(prevState => ({
       settlerCount: prevState.settlerCount - 1
     }));
+    this.calculateHappiness();
   };
 
   addSettler = () => {
-    //let settlerCount = this.state.settlerCount;
     this.setState(prevState => ({
       settlerCount: prevState.settlerCount + 1
     }));
+    this.calculateHappiness();
   };
 
   subtractFood = () => {
     this.setState(prevState => ({
       foodCount: prevState.foodCount - 1
     }));
+    this.calculateHappiness();
   };
 
   addFood = () => {
     this.setState(prevState => ({
       foodCount: prevState.foodCount + 1
     }));
+    this.calculateHappiness();
   };
 
   subtractWater = () => {
     this.setState(prevState => ({
       waterCount: prevState.waterCount - 1
     }));
+    this.calculateHappiness();
   };
 
   addWater = () => {
     this.setState(prevState => ({
       waterCount: prevState.waterCount + 1
     }));
+    this.calculateHappiness();
   };
 
   subtractBed = () => {
     this.setState(prevState => ({
       bedCount: prevState.bedCount - 1
     }));
+    this.calculateHappiness();
   };
 
   addBed = () => {
     this.setState(prevState => ({
       bedCount: prevState.bedCount + 1
     }));
+    this.calculateHappiness();
   };
 
   subtractShelteredBed = () => {
     this.setState(prevState => ({
       shelteredBedCount: prevState.shelteredBedCount - 1
     }));
+    this.calculateHappiness();
   };
 
   addShelteredBed = () => {
     this.setState(prevState => ({
       shelteredBedCount: prevState.shelteredBedCount + 1
     }));
+    this.calculateHappiness();
   };
 
   subtractDefense = () => {
     this.setState(prevState => ({
       defenseCount: prevState.defenseCount - 1
     }));
+    this.calculateHappiness();
   };
 
   addDefense = () => {
     this.setState(prevState => ({
       defenseCount: prevState.defenseCount + 1
     }));
+    this.calculateHappiness();
   };
 
   //componentDidMount() {
   //this.calculateHappiness();
   //}
 
-  //component did mount/component did update
   calculateHappiness() {
-    let settlerCount = this.state.settlerCount;
-    let foodCount = this.state.foodCount;
-    let waterCount = this.state.waterCount;
-    let bedCount = this.state.bedCount;
-    let shelteredBedCount = this.state.shelteredBedCount;
-    let defenseCount = this.state.defenseCount;
+    let {
+      settlerCount,
+      foodCount,
+      waterCount,
+      bedCount,
+      shelteredBedCount,
+      defenseCount
+    } = this.state;
 
-    let totalHappiness = parseInt(
-      foodCount * 20 +
-        waterCount * 20 +
-        bedCount * 10 +
-        shelteredBedCount * 10 +
-        defenseCount * 20 / settlerCount
-    );
-    //this.state.foodCount * 20 +
-    //this.state.waterCount * 20 +
-    //this.state.bedCount * 10 +
-    //this.state.shelteredBedCount * 10 +
-    //this.state.defenseCount * 20 / this.state.settlerCount;
-
-    this.setState({
-      totalHappiness
-    });
-    console.log(settlerCount);
-    console.log(this.state.foodCount);
-    console.log(this.state.waterCount);
-    console.log(this.state.bedCount);
-    console.log(this.state.shelteredBedCount);
-    console.log(this.state.defenseCount);
+    this.setState(prevState => ({
+      totalHappiness:
+        (foodCount * 20 +
+          waterCount * 20 +
+          bedCount * 10 +
+          shelteredBedCount * 10 +
+          defenseCount * 20) /
+        settlerCount
+    }));
   }
 
   render() {

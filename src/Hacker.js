@@ -55,33 +55,33 @@ class Hacker extends Component {
     return (
       <div className="Terminal">
         <form onSubmit={this.handleSubmit}>
-          Password 1:
+          <label>Password 1:</label>
           <input type="text" name="p1" onChange={this.handleChange} />
-          Password 2:
+          <label>Password 2:</label>
           <input type="text" name="p2" onChange={this.handleChange} />
-          Password 3:
+          <label>Password 3:</label>
           <input type="text" name="p3" onChange={this.handleChange} />
-          Password 4:
+          <label>Password 4:</label>
           <input type="text" name="p4" onChange={this.handleChange} />
-          Password 5:
+          <label>Password 5:</label>
           <input type="text" name="p5" onChange={this.handleChange} />
-          Password 6:
+          <label> Password 6:</label>
           <input type="text" name="p6" onChange={this.handleChange} />
-          Password 7:
+          <label>Password 7:</label>
           <input type="text" name="p7" onChange={this.handleChange} />
-          Password 8:
+          <label>Password 8:</label>
           <input type="text" name="p8" onChange={this.handleChange} />
-          Password 9:
+          <label>Password 9:</label>
           <input type="text" name="p9" onChange={this.handleChange} />
-          Password 10:
+          <label>Password 10:</label>
           <input type="text" name="p10" onChange={this.handleChange} />
-          Password 11:
+          <label>Password 11:</label>
           <input type="text" name="p11" onChange={this.handleChange} />
-          Password 12:
+          <label>Password 12:</label>
           <input type="text" name="p12" onChange={this.handleChange} />
-          Password 13:
+          <label>Password 13:</label>
           <input type="text" name="p13" onChange={this.handleChange} />
-          Password 14:
+          <label>Password 14:</label>
           <input type="text" name="p14" onChange={this.handleChange} />
           <input type="submit" value="Submit" />
         </form>
