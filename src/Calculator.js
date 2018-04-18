@@ -37,23 +37,10 @@ class Calculator extends Component {
   }
 
   subtractSettler() {
-    let settlerCount = this.state.settlerCount - 1;
-
-    this.setState({
-      settlerCount
-    });
-    console.log(settlerCount);
-    this.calculateHappiness();
+    this.setState({ settlerCount: this.state.settlerCount - 1 });
   }
-
   addSettler() {
-    let settlerCount = this.state.settlerCount + 1;
-
-    this.setState({
-      settlerCount
-    });
-    console.log(settlerCount);
-    this.calculateHappiness();
+    this.setState({ settlerCount: this.state.settlerCount + 1 });
   }
 
   subtractFood() {
