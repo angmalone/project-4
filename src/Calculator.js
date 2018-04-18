@@ -2,8 +2,8 @@ import React, { Component } from "react";
 //import InputRange from "react-input-range";
 
 class Calculator extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       settlerCount: 0,
@@ -36,51 +36,83 @@ class Calculator extends Component {
     this.calculateHappiness = this.calculateHappiness.bind(this);
   }
 
-  subtractSettler() {
-    this.setState({ settlerCount: this.state.settlerCount - 1 });
-  }
-  addSettler() {
-    this.setState({ settlerCount: this.state.settlerCount + 1 });
-  }
+  subtractSettler = () => {
+    //let settlerCount = this.state.settlerCount;
+    this.setState(prevState => ({
+      settlerCount: prevState.settlerCount - 1
+    }));
+  };
 
-  subtractFood() {
-    this.setState({ foodCount: this.state.foodCount - 1 });
-  }
-  addFood() {
-    this.setState({ foodCount: this.state.foodCount + 1 });
-  }
+  addSettler = () => {
+    //let settlerCount = this.state.settlerCount;
+    this.setState(prevState => ({
+      settlerCount: prevState.settlerCount + 1
+    }));
+  };
 
-  subtractWater() {
-    this.setState({ waterCount: this.state.waterCount - 1 });
-  }
-  addWater() {
-    this.setState({ waterCount: this.state.waterCount + 1 });
-  }
+  subtractFood = () => {
+    this.setState(prevState => ({
+      foodCount: prevState.foodCount - 1
+    }));
+  };
 
-  subtractBed() {
-    this.setState({ bedCount: this.state.bedCount - 1 });
-  }
-  addBed() {
-    this.setState({ bedCount: this.state.bedCount + 1 });
-  }
+  addFood = () => {
+    this.setState(prevState => ({
+      foodCount: prevState.foodCount + 1
+    }));
+  };
 
-  subtractShelteredBed() {
-    this.setState({ shelteredBedCount: this.state.shelteredBedCount - 1 });
-  }
-  addShelteredBed() {
-    this.setState({ shelteredBedCount: this.state.shelteredBedCount + 1 });
-  }
+  subtractWater = () => {
+    this.setState(prevState => ({
+      waterCount: prevState.waterCount - 1
+    }));
+  };
 
-  subtractDefense() {
-    this.setState({ defenseCount: this.state.defenseCount - 1 });
-  }
-  addDefense() {
-    this.setState({ defenseCount: this.state.defenseCount + 1 });
-  }
+  addWater = () => {
+    this.setState(prevState => ({
+      waterCount: prevState.waterCount + 1
+    }));
+  };
 
-  componentDidMount() {
-    this.calculateHappiness();
-  }
+  subtractBed = () => {
+    this.setState(prevState => ({
+      bedCount: prevState.bedCount - 1
+    }));
+  };
+
+  addBed = () => {
+    this.setState(prevState => ({
+      bedCount: prevState.bedCount + 1
+    }));
+  };
+
+  subtractShelteredBed = () => {
+    this.setState(prevState => ({
+      shelteredBedCount: prevState.shelteredBedCount - 1
+    }));
+  };
+
+  addShelteredBed = () => {
+    this.setState(prevState => ({
+      shelteredBedCount: prevState.shelteredBedCount + 1
+    }));
+  };
+
+  subtractDefense = () => {
+    this.setState(prevState => ({
+      defenseCount: prevState.defenseCount - 1
+    }));
+  };
+
+  addDefense = () => {
+    this.setState(prevState => ({
+      defenseCount: prevState.defenseCount + 1
+    }));
+  };
+
+  //componentDidMount() {
+  //this.calculateHappiness();
+  //}
 
   //component did mount/component did update
   calculateHappiness() {
@@ -91,12 +123,13 @@ class Calculator extends Component {
     let shelteredBedCount = this.state.shelteredBedCount;
     let defenseCount = this.state.defenseCount;
 
-    let totalHappiness =
+    let totalHappiness = parseInt(
       foodCount * 20 +
-      waterCount * 20 +
-      bedCount * 10 +
-      shelteredBedCount * 10 +
-      defenseCount * 20 / settlerCount;
+        waterCount * 20 +
+        bedCount * 10 +
+        shelteredBedCount * 10 +
+        defenseCount * 20 / settlerCount
+    );
     //this.state.foodCount * 20 +
     //this.state.waterCount * 20 +
     //this.state.bedCount * 10 +
