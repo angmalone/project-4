@@ -51,35 +51,39 @@ class HackerNew extends Component {
     );
     filteredGuesses = guesses.filter(Boolean);
 
-    /*let filteredGuesses = ["largest", "library", "hissing", "parents", "vassals"];
-let lastWord = "fishing";
-let lastLikeness = 5;
-let matchingLetters = 0;
-let predictions = [];
+    let lastWord = this.state.lastWord;
+    let lastLikeness = this.state.lastLikeness;
+    let matchingLetters = this.state.matchingLetters;
+    let predictions = this.state.predictions;
 
-function checkMatch() {
-  for (let i = 0; i < filteredGuesses.length; i++) {
-    if (filteredGuesses[i].length !== lastWord.length) {
-      alert("Word lengths should match!");
-    } else {
-      let j = 0;
-      while (j < filteredGuesses[i].length) {
-        if (filteredGuesses[i].charAt(j) == lastWord.charAt(j)) {
-            matchingLetters++;
-            if (matchingLetters == lastLikeness) {
-              predictions.push(filteredGuesses[i])
+    function checkMatch() {
+      for (let i = 0; i < filteredGuesses.length; i++) {
+        if (filteredGuesses[i].length !== lastWord.length) {
+          alert("Word lengths should match!");
+        } else {
+          let j = 0;
+          while (j < filteredGuesses[i].length) {
+            if (filteredGuesses[i].charAt(j) === lastWord.charAt(j)) {
+              matchingLetters++;
+              if (matchingLetters === lastLikeness) {
+                predictions.push(filteredGuesses[i]);
+              }
             }
+            j++;
+          }
+          console.log(matchingLetters);
+          matchingLetters = 0;
         }
-        j++;
       }
-      console.log(matchingLetters);
-      matchingLetters = 0
     }
-  }
-  console.log(predictions)
-}
-checkMatch();*/
-    console.log(filteredGuesses);
+    //updatePredictions = () => {
+    //this.setState(prevState => {
+    //return { predictions: !prevState.predictions };
+    //});
+    //};
+
+    checkMatch();
+    console.log(predictions);
   }
 
   render() {
@@ -107,6 +111,7 @@ checkMatch();*/
           <input type="submit" value="SUBMIT" />
         </form>
         <h3>Possible Passwords:</h3>
+        {this.state.predictions}
       </div>
     );
   }

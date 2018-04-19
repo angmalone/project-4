@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 import Calculator from "./Calculator";
-import Hacker from "./Hacker";
 import HackerNew from "./HackerNew";
 import Pic from "./Pic";
 //import Star from "./star.png";
@@ -34,7 +33,7 @@ class App extends Component {
             </li>
           </ul>
         </nav>
-        <Pic />
+
         <main>
           <Switch>
             <Route path="/terminal-hacker" render={() => <HackerNew />} />
