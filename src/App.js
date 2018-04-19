@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Calculator from "./Calculator";
 import Hacker from "./Hacker";
+import HackerNew from "./HackerNew";
 //import Pic from "./Pic";
 //import Star from "./star.png";
 //import VaultBoy from "./vaultboygreen.gif";
@@ -36,7 +37,7 @@ class App extends Component {
 
         <main>
           <Switch>
-            <Route path="/terminal-hacker" render={() => <Hacker />} />
+            <Route path="/terminal-hacker" render={() => <HackerNew />} />
             <Route path="/happiness-calculator" render={() => <Calculator />} />
           </Switch>
         </main>

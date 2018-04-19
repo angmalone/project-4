@@ -5,6 +5,7 @@
 body {
   background-color: #030303;
   width: 1200px;
+  margin: 0 auto;
 }
 
 a:link {
@@ -41,6 +42,9 @@ h2 {
   text-shadow: 1px 1px 10px #4dff5e;
   font-size: 35px;
 }
+h3 {
+  text-shadow: 1px 1px 10px #4dff5e;
+}
 h1,
 h2,
 h3,
@@ -74,10 +78,6 @@ input:focus {
   outline: none;
 }
 
-.tabs {
-  color: #56ff68;
-}
-
 .Terminal,
 .happiness {
   width: 400px;
@@ -90,6 +90,8 @@ button {
   border: none;
   font-size: 30px;
   font-family: "Roboto Condensed", sans-serif;
+  color: #56ff68;
+  text-shadow: 1px 1px 10px #4dff5e;
 }
 
 input[type="submit"] {
