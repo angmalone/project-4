@@ -1,13 +1,48 @@
 .App {
   text-align: center;
-  background-color: black;
+}
+
+body {
+  background-color: #030303;
+  width: 1200px;
 }
 
 a:link {
   text-decoration: none;
 }
 
+/*.lol {
+  float: right;
+}*/
+
+.lmao {
+  display: block;
+  color: #56ff68;
+  text-align: center;
+  text-decoration: none;
+}
+
+li {
+  display: inline;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+img {
+  margin-top: -15%;
+  padding-left: 10%;
+}
+h1 {
+  font-size: 50px;
+  text-shadow: 1px 1px 10px #4dff5e;
+}
+h2 {
+  text-shadow: 1px 1px 10px #4dff5e;
+  font-size: 35px;
+}
 h1,
+h2,
 h3,
 p,
 label {
@@ -16,11 +51,57 @@ label {
   color: #56ff68;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+label {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 20px;
+}
+
+input[type="text"] {
+  font-family: "Share Tech Mono", monospace;
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  border-bottom: solid 1px #56ff68;
+  color: #56ff68;
+  caret-color: #56ff68;
+  font-size: 20px;
+  text-transform: uppercase;
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+input:focus {
+  outline: none;
+}
+
+.tabs {
+  color: #56ff68;
+}
+
+.Terminal,
+.happiness {
+  width: 400px;
+  padding-left: 40px;
+}
+
+input[type="submit"],
+button {
+  background: transparent;
+  border: none;
+}
+
+input[type="submit"] {
+  color: #56ff68;
+}
+
+.counter {
+  display: inline-block;
+}
+
+.title {
+  padding-right: 65px;
+}
+
+img {
+  margin-top: 10%;
 }

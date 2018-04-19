@@ -47,8 +47,24 @@ class Hacker extends Component {
       p13: this.state.p13,
       p14: this.state.p14
     });
-    //const passwords = this.state.passwords.map((password, index)
-    //console.log(this.state);
+
+    //let first_guess = "hurt"
+    //let second_guess = "shot"
+    //let matchingLetters = 0;
+
+    //function checkMatch() {
+    //let i = 0;
+    //while (i < first_guess.length) {
+    //if (first_guess.charAt(i) == second_guess.charAt(i)) {
+    //matchingLetters++;
+    //} else {
+    //matchingLetters + 0
+    //}
+    //i++;
+    //}
+    //console.log(matchingLetters)
+    //}
+    //checkMatch()
   }
 
   render() {
@@ -83,7 +99,7 @@ class Hacker extends Component {
           <input type="text" name="p13" onChange={this.handleChange} />
           <label>Password 14:</label>
           <input type="text" name="p14" onChange={this.handleChange} />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="SUBMIT" />
         </form>
         <h3>Possible Passwords:</h3>
       </div>
