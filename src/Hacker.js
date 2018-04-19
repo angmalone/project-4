@@ -54,6 +54,9 @@ class Hacker extends Component {
 
     //function checkMatch() {
     //let i = 0;
+    //if (first_guess.lenth !== second_guess.length ){
+    //  alert("Word length should match!")
+    //} else {
     //while (i < first_guess.length) {
     //if (first_guess.charAt(i) == second_guess.charAt(i)) {
     //matchingLetters++;
@@ -63,7 +66,7 @@ class Hacker extends Component {
     //i++;
     //}
     //console.log(matchingLetters)
-    //}
+    //}]
     //checkMatch()
   }
 
