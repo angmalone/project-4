@@ -3,7 +3,7 @@ import "./App.css";
 import Calculator from "./Calculator";
 import Hacker from "./Hacker";
 import HackerNew from "./HackerNew";
-//import Pic from "./Pic";
+import Pic from "./Pic";
 //import Star from "./star.png";
 //import VaultBoy from "./vaultboygreen.gif";
 import { Route, Link, Switch } from "react-router-dom";
@@ -34,7 +34,7 @@ class App extends Component {
             </li>
           </ul>
         </nav>
-
+        <Pic />
         <main>
           <Switch>
             <Route path="/terminal-hacker" render={() => <HackerNew />} />

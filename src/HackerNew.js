@@ -51,27 +51,34 @@ class HackerNew extends Component {
     );
     filteredGuesses = guesses.filter(Boolean);
 
-    //let lastWord = this.state.lastWord
-    //let second_guess = "shot"
-    //let lastLikeness = this.state.lastLikeness
-    //let matchingLetters = 0;
+    /*let filteredGuesses = ["largest", "library", "hissing", "parents", "vassals"];
+let lastWord = "fishing";
+let lastLikeness = 5;
+let matchingLetters = 0;
+let predictions = [];
 
-    //function checkMatch() {
-    //let i = 0;
-    //if (first_guess.length !== second_guess.length ){
-    //  alert("Word length should match!")
-    //} else {
-    //while (i < first_guess.length) {
-    //if (first_guess.charAt(i) == second_guess.charAt(i)) {
-    //matchingLetters++;
-    //} else {
-    //matchingLetters + 0
-    //}
-    //i++;
-    //}
-    //console.log(matchingLetters)
-    //}]
-    //checkMatch()
+function checkMatch() {
+  for (let i = 0; i < filteredGuesses.length; i++) {
+    if (filteredGuesses[i].length !== lastWord.length) {
+      alert("Word lengths should match!");
+    } else {
+      let j = 0;
+      while (j < filteredGuesses[i].length) {
+        if (filteredGuesses[i].charAt(j) == lastWord.charAt(j)) {
+            matchingLetters++;
+            if (matchingLetters == lastLikeness) {
+              predictions.push(filteredGuesses[i])
+            }
+        }
+        j++;
+      }
+      console.log(matchingLetters);
+      matchingLetters = 0
+    }
+  }
+  console.log(predictions)
+}
+checkMatch();*/
     console.log(filteredGuesses);
   }
 
