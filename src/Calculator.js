@@ -142,7 +142,8 @@ class Calculator extends Component {
       nextState.foodCount !== this.state.foodCount ||
       nextState.bedCount !== this.state.bedCount ||
       nextState.shelteredBedCount !== this.state.shelteredBedCount ||
-      nextState.defenseCount !== this.state.defenseCount
+      nextState.defenseCount !== this.state.defenseCount ||
+      nextState.totalHappiness !== this.state.totalHappiness
     );
   }
 
@@ -181,57 +182,57 @@ class Calculator extends Component {
         <div className="counter">
           <h3># of settlers:</h3>
           <button onClick={this.subtractSettler}>
-            <img src={subtract} />
+            <img src={subtract} alt="subtract" />
           </button>
           <h3>{this.state.settlerCount}</h3>
           <button onClick={this.addSettler}>
-            <img src={add} />
+            <img src={add} alt="add" />
           </button>
         </div>
 
         <h3>Amount of food:</h3>
         <button onClick={this.subtractFood}>
-          <img src={subtract} />
+          <img src={subtract} alt="subtract" />
         </button>
         <h3>{this.state.foodCount}</h3>
         <button onClick={this.addFood}>
-          <img src={add} />
+          <img src={add} alt="add" />
         </button>
 
         <h3>Amount of water:</h3>
         <button onClick={this.subtractWater}>
-          <img src={subtract} />
+          <img src={subtract} alt="subtract" />
         </button>
         <h3>{this.state.waterCount}</h3>
         <button onClick={this.addWater}>
-          <img src={add} />
+          <img src={add} alt="add" />
         </button>
 
         <h3># of beds:</h3>
         <button onClick={this.subtractBed}>
-          <img src={subtract} />
+          <img src={subtract} alt="subtract" />
         </button>
         <h3>{this.state.bedCount}</h3>
         <button onClick={this.addBed}>
-          <img src={add} />
+          <img src={add} alt="add" />
         </button>
 
         <h3># of sheltered beds:</h3>
         <button onClick={this.subtractShelteredBed}>
-          <img src={subtract} />
+          <img src={subtract} alt="subtract" />
         </button>
         <h3>{this.state.shelteredBedCount}</h3>
         <button onClick={this.addShelteredBed}>
-          <img src={add} />
+          <img src={add} alt="add" />
         </button>
 
         <h3>Amount of defense:</h3>
         <button onClick={this.subtractDefense}>
-          <img src={subtract} />
+          <img src={subtract} alt="subtract" />
         </button>
         <h3>{this.state.defenseCount}</h3>
         <button onClick={this.addDefense}>
-          <img src={add} />
+          <img src={add} alt="add" />
         </button>
 
         <h3>Total Happiness:</h3>
