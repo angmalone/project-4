@@ -3,8 +3,6 @@ import subtract from "./pics/subtractsmall.png";
 import add from "./pics/addsmall.png";
 import VaultBoy from "./pics/vaultboygreensmall.gif";
 import "./Calculator.css";
-//import "./Calculator.css";
-//import InputRange from "react-input-range";
 
 class Calculator extends Component {
   constructor(props) {

@@ -2,7 +2,6 @@ body {
   background-color: #030303;
   width: 1200px;
   margin: 0 auto;
-  /*background-image: url("mosh.gif");*/
 }
 
 a:link {
@@ -44,11 +43,6 @@ label {
   color: #56ff68;
 }
 
-label {
-  font-family: "Share Tech Mono", monospace;
-  font-size: 20px;
-}
-
 input[type="text"] {
   font-family: "Share Tech Mono", monospace;
   border-top: transparent;
@@ -72,7 +66,6 @@ input:focus {
 .terminal {
   width: 570px;
   padding-left: 50px;
-  overflow: hidden;
   padding-top: 50px;
 }
 
@@ -84,10 +77,6 @@ button {
   font-family: "Roboto Condensed", sans-serif;
   color: #56ff68;
   text-shadow: 1px 1px 10px #4dff5e;
-}
-
-input[type="submit"] {
-  color: #56ff68;
 }
 
 .title {
