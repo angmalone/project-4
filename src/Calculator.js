@@ -247,9 +247,7 @@ class Calculator extends Component {
             </button>
           </li>
         </ul>
-        <br />
-        <br />
-        <br />
+
         <h3>Total Happiness:</h3>
         <h2>{this.state.totalHappiness}</h2>
       </div>

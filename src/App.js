@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="lol">
-        <nav className="lmao">
+        <nav className="nav">
           <ul>
             <li className="title">
               <h2>PIMP BOY 3 BILLION</h2>

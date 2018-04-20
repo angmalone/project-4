@@ -33,6 +33,10 @@ class HackerNew extends Component {
   }
 
   handleSubmit(e) {
+    let lastWord = this.state.lastWord;
+    let lastLikeness = this.state.lastLikeness;
+    let matchingLetters = this.state.matchingLetters;
+    let predictions = this.state.predictions;
     e.preventDefault();
     this.setState({});
     let guesses = [];
@@ -53,40 +57,32 @@ class HackerNew extends Component {
     filteredGuesses = guesses.filter(Boolean);
     console.log(filteredGuesses);
 
-    let lastWord = this.state.lastWord;
-    let lastLikeness = this.state.lastLikeness;
-    let matchingLetters = this.state.matchingLetters;
-    let predictions = this.state.predictions;
-
-    function checkMatch() {
-      for (let i = 0; i < filteredGuesses.length; i++) {
-        if (filteredGuesses[i].length !== lastWord.length) {
-          alert("Word lengths should match!");
-        } else {
-          let j = 0;
-          while (j < filteredGuesses[i].length) {
-            if (filteredGuesses[i].charAt(j) === lastWord.charAt(j)) {
-              matchingLetters++;
-              if (matchingLetters === lastLikeness) {
-                predictions.push(filteredGuesses[i]);
-              }
+    for (let i = 0; i < filteredGuesses.length; i++) {
+      if (filteredGuesses[i].length !== lastWord.length) {
+        alert("Word lengths should match!");
+      } else {
+        let j = 0;
+        while (j < filteredGuesses[i].length) {
+          if (filteredGuesses[i].charAt(j) === lastWord.charAt(j)) {
+            console.log(matchingLetters);
+            matchingLetters++;
+            if (matchingLetters === lastLikeness) {
+              predictions.push(filteredGuesses[i]);
             }
-            j++;
           }
-          console.log(matchingLetters);
-          matchingLetters = 0;
+          j++;
         }
+        console.log("I made it", matchingLetters);
+        matchingLetters = 0;
       }
     }
-    //updatePredictions = () => {
-    //this.setState(prevState => {
-    //return { predictions: !prevState.predictions };
-    //});
-    //};
-
-    checkMatch();
-    console.log(predictions);
   }
+
+  // updatePredictions() {
+  //   this.setState(prevState => {
+  //     return { predictions: prevState.predictions };
+  //   });
+  // }
 
   render() {
     return (
