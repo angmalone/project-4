@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import VaultBoy from "./vaultboygreensmall.gif";
+import VaultBoy from "./pics/vaultboygreensmall.gif";
 import "./HackerNew.css";
 
 class HackerNew extends Component {
@@ -38,7 +38,7 @@ class HackerNew extends Component {
     let matchingLetters = this.state.matchingLetters;
     let predictions = this.state.predictions;
     e.preventDefault();
-    this.setState({});
+    //this.setState({});
     let guesses = [];
     let filteredGuesses = [];
     guesses.push(
@@ -52,11 +52,12 @@ class HackerNew extends Component {
       this.state.choice8,
       this.state.choice9,
       this.state.choice10,
-      this.state.choice11
+      this.state.choice11,
+      this.state.choice12
     );
     filteredGuesses = guesses.filter(Boolean);
     console.log(filteredGuesses);
-
+    console.log(matchingLetters);
     for (let i = 0; i < filteredGuesses.length; i++) {
       if (filteredGuesses[i].length !== lastWord.length) {
         alert("Word lengths should match!");
@@ -72,13 +73,12 @@ class HackerNew extends Component {
           }
           j++;
         }
-        console.log("I made it", matchingLetters);
+        console.log(matchingLetters);
         matchingLetters = 0;
       }
     }
   }
 
-  // updatePredictions() {
   //   this.setState(prevState => {
   //     return { predictions: prevState.predictions };
   //   });
@@ -109,6 +109,7 @@ class HackerNew extends Component {
             <input type="text" name="choice9" onChange={this.handleChange} />
             <input type="text" name="choice10" onChange={this.handleChange} />
             <input type="text" name="choice11" onChange={this.handleChange} />
+            <input type="text" name="choice12" onChange={this.handleChange} />
             <br />
             <br />
             <input type="submit" value="SUBMIT" />

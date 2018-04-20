@@ -1,6 +1,13 @@
-/*input,
-label {
+.total {
+  padding-left: 95px;
+}
+
+.happiness {
   display: inline-block;
-  vertical-align: middle;
-  margin: 10px 0;
-}*/
+}
+.pic {
+  display: inline-block;
+  padding-left: 175px;
+  margin-top: 150px;
+  vertical-align: top;
+}

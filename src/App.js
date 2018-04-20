@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import Calculator from "./Calculator";
 import HackerNew from "./HackerNew";
-import VaultBoy from "./vaultboygreensmall.gif";
 import { Route, Link, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -12,7 +11,7 @@ class App extends Component {
         <nav className="nav">
           <ul>
             <li className="title">
-              <h2>PIMP BOY 3 BILLION</h2>
+              <h2>PIP BOY 3 BILLION</h2>
             </li>
             <li>
               <Link to="/">
