@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Calculator from "./Calculator";
 import HackerNew from "./HackerNew";
-import Pic from "./Pic";
-//import Star from "./star.png";
-//import VaultBoy from "./vaultboygreen.gif";
+import VaultBoy from "./vaultboygreensmall.gif";
 import { Route, Link, Switch } from "react-router-dom";
 
 class App extends Component {

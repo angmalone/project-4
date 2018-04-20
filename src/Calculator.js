@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import subtract from "./subtractsmall.png";
 import add from "./addsmall.png";
+import "./Calculator.css";
 //import "./Calculator.css";
 //import InputRange from "react-input-range";
 
@@ -179,62 +180,76 @@ class Calculator extends Component {
     console.log(this.state.totalHappiness);
     return (
       <div className="happiness">
-        <div className="counter">
-          <h3># of settlers:</h3>
-          <button onClick={this.subtractSettler}>
-            <img src={subtract} alt="subtract" />
-          </button>
-          <h3>{this.state.settlerCount}</h3>
-          <button onClick={this.addSettler}>
-            <img src={add} alt="add" />
-          </button>
-        </div>
+        <ul>
+          <li>
+            <h3># of settlers:</h3>
+            <button onClick={this.subtractSettler}>
+              <img src={subtract} alt="subtract" />
+            </button>
+            <h3>{this.state.settlerCount}</h3>
+            <button onClick={this.addSettler}>
+              <img src={add} alt="add" />
+            </button>
+          </li>
 
-        <h3>Amount of food:</h3>
-        <button onClick={this.subtractFood}>
-          <img src={subtract} alt="subtract" />
-        </button>
-        <h3>{this.state.foodCount}</h3>
-        <button onClick={this.addFood}>
-          <img src={add} alt="add" />
-        </button>
+          <li>
+            <h3>Amount of food:</h3>
+            <button onClick={this.subtractFood}>
+              <img src={subtract} alt="subtract" />
+            </button>
+            <h3>{this.state.foodCount}</h3>
+            <button onClick={this.addFood}>
+              <img src={add} alt="add" />
+            </button>
+          </li>
 
-        <h3>Amount of water:</h3>
-        <button onClick={this.subtractWater}>
-          <img src={subtract} alt="subtract" />
-        </button>
-        <h3>{this.state.waterCount}</h3>
-        <button onClick={this.addWater}>
-          <img src={add} alt="add" />
-        </button>
+          <li>
+            <h3>Amount of water:</h3>
+            <button onClick={this.subtractWater}>
+              <img src={subtract} alt="subtract" />
+            </button>
+            <h3>{this.state.waterCount}</h3>
+            <button onClick={this.addWater}>
+              <img src={add} alt="add" />
+            </button>
+          </li>
 
-        <h3># of beds:</h3>
-        <button onClick={this.subtractBed}>
-          <img src={subtract} alt="subtract" />
-        </button>
-        <h3>{this.state.bedCount}</h3>
-        <button onClick={this.addBed}>
-          <img src={add} alt="add" />
-        </button>
+          <li>
+            <h3># of beds:</h3>
+            <button onClick={this.subtractBed}>
+              <img src={subtract} alt="subtract" />
+            </button>
+            <h3>{this.state.bedCount}</h3>
+            <button onClick={this.addBed}>
+              <img src={add} alt="add" />
+            </button>
+          </li>
 
-        <h3># of sheltered beds:</h3>
-        <button onClick={this.subtractShelteredBed}>
-          <img src={subtract} alt="subtract" />
-        </button>
-        <h3>{this.state.shelteredBedCount}</h3>
-        <button onClick={this.addShelteredBed}>
-          <img src={add} alt="add" />
-        </button>
+          <li>
+            <h3># of sheltered beds:</h3>
+            <button onClick={this.subtractShelteredBed}>
+              <img src={subtract} alt="subtract" />
+            </button>
+            <h3>{this.state.shelteredBedCount}</h3>
+            <button onClick={this.addShelteredBed}>
+              <img src={add} alt="add" />
+            </button>
+          </li>
 
-        <h3>Amount of defense:</h3>
-        <button onClick={this.subtractDefense}>
-          <img src={subtract} alt="subtract" />
-        </button>
-        <h3>{this.state.defenseCount}</h3>
-        <button onClick={this.addDefense}>
-          <img src={add} alt="add" />
-        </button>
-
+          <li>
+            <h3>Amount of defense:</h3>
+            <button onClick={this.subtractDefense}>
+              <img src={subtract} alt="subtract" />
+            </button>
+            <h3>{this.state.defenseCount}</h3>
+            <button onClick={this.addDefense}>
+              <img src={add} alt="add" />
+            </button>
+          </li>
+        </ul>
+        <br />
+        <br />
+        <br />
         <h3>Total Happiness:</h3>
         <h2>{this.state.totalHappiness}</h2>
       </div>

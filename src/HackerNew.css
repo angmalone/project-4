@@ -1,0 +1,9 @@
+.terminal {
+  display: inline-block;
+}
+.pic {
+  display: inline-block;
+  padding-left: 175px;
+  margin-top: 150px;
+  vertical-align: top;
+}

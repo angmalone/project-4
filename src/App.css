@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 body {
   background-color: #030303;
   width: 1200px;
@@ -30,10 +26,6 @@ li {
   padding-right: 10px;
 }
 
-img {
-  margin-top: -15%;
-  padding-left: 10%;
-}
 h1 {
   font-size: 50px;
   text-shadow: 1px 1px 10px #4dff5e;
@@ -70,6 +62,7 @@ input[type="text"] {
   caret-color: #56ff68;
   font-size: 20px;
   text-transform: uppercase;
+  margin: 5px;
   box-shadow: none;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -78,10 +71,12 @@ input:focus {
   outline: none;
 }
 
-.Terminal,
-.happiness {
-  width: 400px;
-  padding-left: 40px;
+.happiness,
+.terminal {
+  width: 570px;
+  padding-left: 50px;
+  overflow: hidden;
+  padding-top: 50px;
 }
 
 input[type="submit"],
@@ -98,14 +93,6 @@ input[type="submit"] {
   color: #56ff68;
 }
 
-.counter {
-  display: inline-block;
-}
-
 .title {
   padding-right: 65px;
-}
-
-img {
-  margin-top: 10%;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-//import PasswordList from "./PasswordList";
+import VaultBoy from "./vaultboygreensmall.gif";
+import "./HackerNew.css";
 
 class HackerNew extends Component {
   constructor(props) {
@@ -50,6 +51,7 @@ class HackerNew extends Component {
       this.state.choice11
     );
     filteredGuesses = guesses.filter(Boolean);
+    console.log(filteredGuesses);
 
     let lastWord = this.state.lastWord;
     let lastLikeness = this.state.lastLikeness;
@@ -88,30 +90,40 @@ class HackerNew extends Component {
 
   render() {
     return (
-      <div className="Terminal">
-        <form onSubmit={this.handleSubmit}>
-          <h3>Enter last selected password:</h3>
-          <input type="text" name="lastWord" onChange={this.handleChange} />
-          <h3>Enter the likeness:</h3>
-          <input type="text" name="lastLikeness" onChange={this.handleChange} />
-          <h3>Enter other password options:</h3>
-          <input type="text" name="choice1" onChange={this.handleChange} />
-          <input type="text" name="choice2" onChange={this.handleChange} />
-          <input type="text" name="choice3" onChange={this.handleChange} />
-          <input type="text" name="choice4" onChange={this.handleChange} />
-          <input type="text" name="choice5" onChange={this.handleChange} />
-          <input type="text" name="choice6" onChange={this.handleChange} />
-          <input type="text" name="choice7" onChange={this.handleChange} />
-          <input type="text" name="choice8" onChange={this.handleChange} />
-          <input type="text" name="choice9" onChange={this.handleChange} />
-          <input type="text" name="choice10" onChange={this.handleChange} />
-          <input type="text" name="choice11" onChange={this.handleChange} />
-          <br />
-          <br />
-          <input type="submit" value="SUBMIT" />
-        </form>
-        <h3>Possible Passwords:</h3>
-        {this.state.predictions}
+      <div className="wrapper">
+        <div className="terminal">
+          <form onSubmit={this.handleSubmit}>
+            <h3>Enter last selected password:</h3>
+            <input type="text" name="lastWord" onChange={this.handleChange} />
+            <h3>Enter the likeness:</h3>
+            <input
+              type="text"
+              name="lastLikeness"
+              onChange={this.handleChange}
+            />
+            <h3>Enter other password options:</h3>
+            <input type="text" name="choice1" onChange={this.handleChange} />
+            <input type="text" name="choice2" onChange={this.handleChange} />
+            <input type="text" name="choice3" onChange={this.handleChange} />
+            <input type="text" name="choice4" onChange={this.handleChange} />
+            <input type="text" name="choice5" onChange={this.handleChange} />
+            <input type="text" name="choice6" onChange={this.handleChange} />
+            <input type="text" name="choice7" onChange={this.handleChange} />
+            <input type="text" name="choice8" onChange={this.handleChange} />
+            <input type="text" name="choice9" onChange={this.handleChange} />
+            <input type="text" name="choice10" onChange={this.handleChange} />
+            <input type="text" name="choice11" onChange={this.handleChange} />
+            <br />
+            <br />
+            <input type="submit" value="SUBMIT" />
+          </form>
+
+          <h3>Possible Passwords:</h3>
+          {this.state.predictions}
+        </div>
+        <div className="pic">
+          <img src={VaultBoy} alt="vault boy" />
+        </div>
       </div>
     );
   }
